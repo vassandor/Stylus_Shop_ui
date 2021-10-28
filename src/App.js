@@ -1,6 +1,19 @@
-function Header() {
+function Menu() {
     return(
-        <h1>Menu</h1>
+        <div>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    )
+}
+
+function Header(props) {
+    return(
+        <div>
+            <h1>{props.title}</h1>
+            <Menu/>
+        </div>
     )
 }
 
@@ -14,13 +27,14 @@ function Content() {
     )
 }
 
-function Footer() {
+function Footer({title, address, phone, email}) {
     return(
         <div>
             <hr/>
-            Stylus Shop
-            <p>Phone: 123456</p>
-            <p>Email: stylusshop@gmail.com</p>
+            <h3>{title}</h3>
+            <p>{address}</p>
+            <p>Phone: {phone}</p>
+            <p>Email: {email}</p>
         </div>
     )
 }
@@ -28,9 +42,16 @@ function Footer() {
 function App() {
   return (
     <div>
-        <Header/>
+        <Header title="Stylus Shop"/>
+
         <Content/>
-        <Footer/>
+
+        <Footer
+            title="Stylus Shop"
+            address="Budapest"
+            phone="+36-30-123-4567"
+            email="stylusshop@gmail.com"
+        />
     </div>
   );
 }

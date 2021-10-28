@@ -1,7 +1,0 @@
-.footer-container{
-    background-color: lightgrey;
-    border-top: 1px solid dimgrey;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-}

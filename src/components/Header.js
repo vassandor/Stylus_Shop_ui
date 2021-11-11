@@ -8,10 +8,13 @@ function Header(props) {
                 <div className="title-container">
                     <h1>DIGITAL SHOP</h1>
 
-                    <div className="search-container">
-                        <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                    <div>
+                        <small className="sign-in-container"><a href="">Sign in</a> or <a href="">Create an Account</a></small>
                         <br/>
-                        <input type="search"/>
+                        <div className="search-box">
+                            <input type="search" placeholder="Search all products..."/>
+                            <i className="fas fa-search"/>
+                        </div>
                         <button><i className="fas fa-shopping-cart"/>CART</button>
                     </div>
                 </div>

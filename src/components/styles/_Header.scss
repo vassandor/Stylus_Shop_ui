@@ -14,13 +14,43 @@
       display: flex;
       justify-content: space-between;
 
-      button{
-        border: none;
-        color: whitesmoke;
-        background-color: rgba(0, 0, 0, 0.2);
+      .sing-in-container{
+
+      }
+
+      .search-box{
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding-right: 10px;
+        border-radius: $default-radius;
+        display: inline-block;
 
         &:hover{
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        i{
+          font-size: 20px;
+          cursor: pointer;
+          color: #585858;
+        }
+      }
+
+      input{
+        color: whitesmoke;
+        background-color: transparent;
+        outline: none;
+      }
+
+      button{
+        margin-left: 5px;
+        border: none;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        &:hover{
+          background-color: rgba(0, 0, 0, 0.6);
         }
       }
 
@@ -32,15 +62,17 @@
         &:hover{
           color: rgba(255, 255, 255, 0.6)
         }
-
       }
-
     }
-
   }
 
   .menu{
     display: flex;
+
+    .menu-item{
+      margin: 10px 20px 10px 0;
+      cursor: pointer;
+    }
   }
 
 }

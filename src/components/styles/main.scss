@@ -11,8 +11,16 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: whitesmoke;
+  background-color: white;
   color: #585858;
+  height: 100vh;
+
+  .App{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
 }
 
 button{
@@ -22,9 +30,10 @@ button{
   cursor: pointer;
   color: $default-blue;
   background-color: transparent;
+  border-radius: $default-radius;
 
   i{
-    padding: 5px;
+    padding: 0 5px;
     font-size: 20px;
   }
 }
@@ -35,5 +44,10 @@ button{
 }
 
 input{
-
+  padding: 11px;
+  font: inherit;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: $default-radius;
+  margin-right: 5px;
 }

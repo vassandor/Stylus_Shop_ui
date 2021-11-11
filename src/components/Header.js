@@ -3,7 +3,30 @@ import React from 'react';
 function Header(props) {
     return (
         <div className="header-container">
-            <h1>Header...</h1>
+
+            <div className="content-container">
+                <div className="title-container">
+                    <h1>DIGITAL SHOP</h1>
+
+                    <div className="search-container">
+                        <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                        <br/>
+                        <input type="search"/>
+                        <button>CART</button>
+                    </div>
+                </div>
+
+                <div className="menu">
+                    <div className="menu-item">CAMERAS</div>
+                    <div className="menu-item">CASES</div>
+                    <div className="menu-item">VIDEO</div>
+                    <div className="menu-item">ACCESSORIES</div>
+                    <div className="menu-item">SPORT OPTICS</div>
+                    <div className="menu-item">LIFESTYLE</div>
+                </div>
+
+            </div>
+
         </div>
     );
 }

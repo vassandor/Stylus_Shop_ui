@@ -14,3 +14,26 @@ body {
   background-color: whitesmoke;
   color: #585858;
 }
+
+button{
+  padding: 10px;
+  font: inherit;
+  border: 1px solid $default-blue;
+  cursor: pointer;
+  color: $default-blue;
+  background-color: transparent;
+
+  i{
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+
+.inverted{
+  background-color: $default-blue;
+  color: whitesmoke;
+}
+
+input{
+
+}

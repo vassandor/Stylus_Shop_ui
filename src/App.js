@@ -1,18 +1,34 @@
 import Header from "./components/Header";
-import Content from "./components/Content";
 import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
+import SignInPage from "./components/Users/SignInPage";
+import RegistrationPage from "./components/Users/RegistrationPage";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-        <div>
-            <Header/>
+  <Router>
+        <div className="App">
+            <div>
+                <Header/>
 
-            <Content/>
+                <Switch>
+                    <Route path="/login" component={SignInPage}/>
+
+                    <Route path="/registration" component={RegistrationPage}/>
+
+                    <Route path="/" component={HomePage}/>
+                </Switch>
+
+            </div>
+
+            <Footer/>
         </div>
-
-      <Footer/>
-    </div>
+  </Router>
   );
 }
 

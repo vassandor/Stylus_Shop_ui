@@ -2,6 +2,22 @@ import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
 
+function MenuItem({item_data}){
+    return <div className="menu-item">
+        {item_data.title.toUpperCase()}
+        {
+            item_data.items && <i className="fas fa-caret-down"/>
+        }
+        {
+            item_data.items && <div className="popup-menu">
+                {
+                    item_data.items.map(i => <small key={i} className="menu-item">{i}</small>)
+                }
+            </div>
+        }
+    </div>
+}
+
 function Menu(){
     const [menu_list, set_menu_list] = useState([])
 
@@ -15,7 +31,7 @@ function Menu(){
     return (
         <div className="menu">
             {
-                menu_list.map(item_data => <div className="menu-item">{item_data.title}</div>)
+                menu_list.map(item_data => <MenuItem key={item_data.id} item_data={item_data}/>)
             }
         </div>
     )

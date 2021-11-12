@@ -10,7 +10,7 @@ function Header(props) {
                     <h1><Link to="/">DIGITAL SHOP</Link></h1>
 
                     <div>
-                        <small className="sign-in-container"><Link to="/login">Sign in</Link> or <Link to="/registration">Create an Account</Link></small>
+                        <small className="sign-in-container"><Link to="/users/login">Sign in</Link> or <Link to="/users/registration">Create an Account</Link></small>
                         <br/>
                         <div className="search-box">
                             <input type="search" placeholder="Search all products..."/>

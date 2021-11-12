@@ -8,7 +8,7 @@ function SignInPage(props) {
                 <h3>LOGIN</h3>
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
-                <small><Link to="/password-reset">Forgot your password?</Link></small>
+                <small><Link to="/users/password-reset">Forgot your password?</Link></small>
                 <button className="inverted">SIGN IN</button>
                 <small>or <Link to="/">Return to Store</Link></small>
             </form>

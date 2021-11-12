@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function Header(props) {
     return (
@@ -6,10 +7,10 @@ function Header(props) {
 
             <div className="content-container">
                 <div className="title-container">
-                    <h1>DIGITAL SHOP</h1>
+                    <h1><Link to="/">DIGITAL SHOP</Link></h1>
 
                     <div>
-                        <small className="sign-in-container"><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                        <small className="sign-in-container"><Link to="/login">Sign in</Link> or <Link to="/registration">Create an Account</Link></small>
                         <br/>
                         <div className="search-box">
                             <input type="search" placeholder="Search all products..."/>

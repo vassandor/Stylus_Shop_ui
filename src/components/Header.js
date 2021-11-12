@@ -1,5 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+import axios from "axios";
+
+function Menu(){
+    const [menu_list, set_menu_list] = useState([])
+
+    useEffect(() => {
+        axios({
+            method: "get",
+            url: "http://localhost:3001/categories"
+        }).then(res => set_menu_list(res.data))
+    },[])
+
+    return (
+        <div className="menu">
+            {
+                menu_list.map(item_data => <div className="menu-item">{item_data.title}</div>)
+            }
+        </div>
+    )
+}
 
 function Header(props) {
     return (
@@ -20,14 +40,7 @@ function Header(props) {
                     </div>
                 </div>
 
-                <div className="menu">
-                    <div className="menu-item">CAMERAS</div>
-                    <div className="menu-item">CASES</div>
-                    <div className="menu-item">VIDEO</div>
-                    <div className="menu-item">ACCESSORIES</div>
-                    <div className="menu-item">SPORT OPTICS</div>
-                    <div className="menu-item">LIFESTYLE</div>
-                </div>
+                <Menu/>
 
             </div>
 

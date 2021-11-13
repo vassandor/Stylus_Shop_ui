@@ -5,7 +5,7 @@
   height: $header-height;
   position: fixed;
   width: 100%;
-  fiter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   z-index: 100;
 
   .content-container{

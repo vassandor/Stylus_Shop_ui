@@ -9,6 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import PasswordResetPage from "./components/Users/PasswordResetPage";
+import ItemListPage from "./components/Pages/ItemListPage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
                 <Header/>
 
                 <Switch>
+                    <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
+
                     <Route path="/users/login" component={SignInPage}/>
 
                     <Route path="/users/registration" component={RegistrationPage}/>

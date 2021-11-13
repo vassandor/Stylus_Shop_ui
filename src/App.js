@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import PasswordResetPage from "./components/Users/PasswordResetPage";
 import ItemListPage from "./components/Pages/ItemListPage";
+import ItemDetailsPage from "./components/Pages/ItemDetailsPage";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
 
                 <Switch>
                     <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
+
+                    <Route path="/details/:slug" component={ItemDetailsPage}/>
 
                     <Route path="/users/login" component={SignInPage}/>
 

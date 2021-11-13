@@ -83,3 +83,9 @@ form{
     margin-bottom: 20px;
   }
 }
+
+hr{
+  border: none;
+  border-top: $border-style;
+  margin: 20px 0;
+}

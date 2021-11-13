@@ -38,23 +38,25 @@ function HomePage(props) {
 
     return (
         <div className="content-container">
-            <Slider/>
+            <div className="content-offset">
+                <Slider/>
 
-            <hr/>
+                <hr/>
 
-            <ShopFor/>
+                <ShopFor/>
 
-            <hr/>
+                <hr/>
 
-            <Home_ItemList title="FEATURED COLLECTION" items={featured_list}/>
+                <Home_ItemList title="FEATURED COLLECTION" items={featured_list}/>
 
-            <hr/>
+                <hr/>
 
-            <Home_ItemList title="ANALOG CAMERAS" items={analog_cameras}/>
+                <Home_ItemList title="ANALOG CAMERAS" items={analog_cameras}/>
 
-            <hr/>
+                <hr/>
 
-            <Home_ItemList title="LEICA M" items={leica_m}/>
+                <Home_ItemList title="LEICA M" items={leica_m}/>
+            </div>
         </div>
     );
 }

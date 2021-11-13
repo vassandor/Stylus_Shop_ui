@@ -12,33 +12,38 @@ import PasswordResetPage from "./components/Users/PasswordResetPage";
 import ItemListPage from "./components/Pages/ItemListPage";
 import ItemDetailsPage from "./components/Pages/ItemDetailsPage";
 import {ItemListProvider} from "./components/Context/ItemListContext";
+import {ShoppingCartProvider} from "./components/Context/ShoppingCartContext";
 
 function App() {
   return (
   <Router>
         <ItemListProvider>
-            <div className="App">
-                <div>
-                    <Header/>
+            <ShoppingCartProvider>
 
-                    <Switch>
-                        <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
+                <div className="App">
+                    <div>
+                        <Header/>
 
-                        <Route path="/details/:slug" component={ItemDetailsPage}/>
+                        <Switch>
+                            <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
 
-                        <Route path="/users/login" component={SignInPage}/>
+                            <Route path="/details/:slug" component={ItemDetailsPage}/>
 
-                        <Route path="/users/registration" component={RegistrationPage}/>
+                            <Route path="/users/login" component={SignInPage}/>
 
-                        <Route path="/users/password-reset" component={PasswordResetPage}/>
+                            <Route path="/users/registration" component={RegistrationPage}/>
 
-                        <Route path="/" component={HomePage}/>
-                    </Switch>
+                            <Route path="/users/password-reset" component={PasswordResetPage}/>
 
+                            <Route path="/" component={HomePage}/>
+                        </Switch>
+
+                    </div>
+
+                    <Footer/>
                 </div>
 
-                <Footer/>
-            </div>
+            </ShoppingCartProvider>
         </ItemListProvider>
   </Router>
   );

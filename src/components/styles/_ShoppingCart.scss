@@ -1,0 +1,45 @@
+.cart-container{
+  position: fixed;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cart-details{
+    width: 800px;
+    background-color: whitesmoke;
+    border-radius: $default-radius;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .price, small, button{
+      align-self: flex-end;
+    }
+
+    .price{
+      margin-bottom: 10px;
+    }
+
+    button{
+      margin-top: 30px;
+    }
+  }
+}
+
+.cart-item-container{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 125px 400px 125px auto 25px;
+  align-items: center;
+
+  img{
+    width: 100%;
+  }
+}

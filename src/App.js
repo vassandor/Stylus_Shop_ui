@@ -13,6 +13,7 @@ import ItemListPage from "./components/Pages/ItemListPage";
 import ItemDetailsPage from "./components/Pages/ItemDetailsPage";
 import {ItemListProvider} from "./components/Context/ItemListContext";
 import {ShoppingCartProvider} from "./components/Context/ShoppingCartContext";
+import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <ShoppingCartProvider>
 
                 <div className="App">
+                    <ShoppingCartPopup/>
                     <div>
                         <Header/>
 

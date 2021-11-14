@@ -1,8 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {ItemListContext} from "../Context/ItemListContext";
+import {ShoppingCartContext} from "../Context/ShoppingCartContext";
 
 function ItemPage({data}){
+    const {add_to_cart} = useContext(ShoppingCartContext)
+
     return <div className="item-details-container">
         <div>
             <img src={data.image} alt=""/>
@@ -14,7 +17,7 @@ function ItemPage({data}){
             <hr/>
 
             <div className="button-container">
-                <button><i className="fas fa-cart-plus"/>ADD TO CART</button>
+                <button onClick={e => add_to_cart(data)}><i className="fas fa-cart-plus"/>ADD TO CART</button>
                 <br/>
                 <button className="inverted">BUY IT NOW</button>
             </div>

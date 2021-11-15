@@ -6,10 +6,26 @@ export const ShoppingCartProvider = (props) => {
     const [shopping_list, set_shopping_list] = useState([])
     const [total, set_total] = useState(0)
     const [count, set_count] = useState(0)
+    const [visible, set_visible] = useState(0)
 
     const set_new_shopping_list = (new_shopping_list) => {
         set_shopping_list(new_shopping_list)
         localStorage.setItem("shopping_list", JSON.stringify(new_shopping_list))
+    }
+    
+    const set_quantity = (item_id, value) => {
+        const _shopping_list = [...shopping_list]
+        for(let i = 0; i < shopping_list.length; i++){
+            let _item = _shopping_list[i]
+            if(_item.id === item_id){
+                let _new_quantity = _item.quantity + value
+                if(_new_quantity > 0) {
+                    _item.quantity = _new_quantity
+                }
+                break
+            }
+        }
+        set_new_shopping_list(_shopping_list)
     }
 
     const is_in_cart = (item_id) => {
@@ -56,6 +72,7 @@ export const ShoppingCartProvider = (props) => {
         }
 
         set_new_shopping_list(_shopping_list)
+        set_visible(true)
     }
 
     const remove_from_cart = (item_id) => {
@@ -80,9 +97,12 @@ export const ShoppingCartProvider = (props) => {
             shopping_list: shopping_list,
             total: total,
             count: count,
+            visible: visible,
+            set_visible: set_visible,
 
             add_to_cart: add_to_cart,
-            remove_from_cart: remove_from_cart
+            remove_from_cart: remove_from_cart,
+            set_quantity: set_quantity
         }}>
             {props.children}
         </ShoppingCartContext.Provider>

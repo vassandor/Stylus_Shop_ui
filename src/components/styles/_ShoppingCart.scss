@@ -19,6 +19,18 @@
     display: flex;
     flex-direction: column;
 
+    .cart-header{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: auto 20px;
+      align-items: center;
+
+      i{
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+
     .price, small, button{
       align-self: flex-end;
     }
@@ -39,7 +51,21 @@
   grid-template-columns: 125px 400px 125px auto 25px;
   align-items: center;
 
+  .quantity-container{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
+    i{
+      margin: 10px;
+    }
+  }
+
   img{
     width: 100%;
+  }
+
+  i{
+    cursor: pointer;
   }
 }

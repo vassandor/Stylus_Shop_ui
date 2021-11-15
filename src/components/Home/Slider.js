@@ -17,17 +17,23 @@ function Slider(props) {
     return (
         <div className="slider-container">
             <div className="image-container">
-                <i className="fas fa-chevron-left"/>
                 {
                     featured_list.map((featured_item, index) => <img key={featured_item.id} className={`slider-image ${current_index === index? "active":""}`} src={featured_item.image} alt=""/>)
                 }
+            </div>
+
+            <div className="button-container">
+                <i className="fas fa-chevron-left"/>
                 <i className="fas fa-chevron-right"/>
             </div>
 
-            <i className="far fa-circle"/>
-            <i className="far fa-circle"/>
-            <i className="fas fa-circle"/>
-            <i className="far fa-circle"/>
+            <div>
+                <i className="far fa-circle"/>
+                <i className="far fa-circle"/>
+                <i className="fas fa-circle"/>
+                <i className="far fa-circle"/>
+            </div>
+
         </div>
     );
 }

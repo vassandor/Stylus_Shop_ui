@@ -8,6 +8,7 @@
   position: relative;
 
   .image-container{
+    z-index: 50;
 
     .slider-image{
       display: none;
@@ -24,7 +25,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 40px;
+    font-size: 50px;
     opacity: 0;
 
     i{

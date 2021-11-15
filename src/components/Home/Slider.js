@@ -1,5 +1,6 @@
 import {ItemListContext} from "../Context/ItemListContext";
 import {useContext, useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 function Slider(props) {
     const {items} = useContext(ItemListContext)
@@ -29,11 +30,11 @@ function Slider(props) {
 
     return (
         <div className="slider-container">
-            <div className="image-container">
+            <Link to={`/details/${items[current_index].slug}`} className="image-container">
                 {
                     featured_list.map((featured_item, index) => <img key={featured_item.id} className={`slider-image ${current_index === index? "active":""}`} src={featured_item.image} alt=""/>)
                 }
-            </div>
+            </Link>
 
             <div className="button-container">
                 <i className="fas fa-chevron-left" onClick={e => step_action(-1)}/>
